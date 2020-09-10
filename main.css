@@ -1,0 +1,225 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 65em;
+  margin: 0 auto;
+}
+
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.split > * {
+  flex-basis: 30%;
+  gap: 2em;
+  min-width: 15em;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: .5em 1.25em;
+  background: var(--clr-accent, blue);
+  color: var(--clr-text, #fff);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125em;
+  border-radius: .25em;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: .7;
+}
+
+.primary-title {
+  font-size: 4rem;
+  font-size: clamp(3rem, 5vw + 1rem, 4.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2.5rem, calc(5vw + 1rem),4rem);
+  line-height: 1;
+  color: #17353d;
+  margin-bottom: 5rem;
+}
+
+@supports (background-blend-mode: multiply) {
+
+.hero {
+  color:  white;
+  text-align: center;
+  padding: 35em 0 2em;
+  background-color: #222;
+  background-image: url(wallpng1.png), radial-gradient(#505, #111);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, .5em);
+}
+
+.season {
+  background: #eee;
+}
+
+.season_item {
+  position: relative;
+  display: block;
+  transform: scale(.85);
+  transition: transform 250ms ease-in-out;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  line-height: 1.2;
+}
+
+
+
+.season_item:hover, .season_item:focus {
+  -webkit-tramsform: scale(1);
+  transform: scale(1);
+}
+
+.season_item:hover .season_details, .season_item:focus .season_details {
+  opacity: 1;
+  text-shadow: 0 0 2em rgba(255, 255, 102, 1);
+}
+
+.season_item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 100% 100% 0 0;
+  background: #2193b0;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.season_details {
+  opacity: 0;
+  transition: opacity 250ms linear;
+}
+
+.season_details span {
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.member {
+  background: radial-gradient(var(--clr-inner, blue), var(--clr-outer, yellow));
+  padding: 3em 0;
+  border-radius: 1em;
+  margin-bottom: 5em;
+  text-align: center;
+}
+
+.member_title{
+  font-size: 4em; //clamp(3rem, calc(5vw+1rem),5.5rem)
+  line-height: 0.5;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 .2em rgba(#255, #255, #102, .2);
+}
+
+.member_image {
+  margin: -5em 0 0 0;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  text-align: right;
+}
+
+@media (min-width: 45em) {
+  .member {
+    text-align: left;
+    margin-bottom: 3em;
+  }
+  .member_image {
+    float: right;
+    width: 60%;
+    shape-outside: url(louis.png);
+    shape-margin: 1em;
+  }
+  .member_title {
+    margin: 0;
+  }
+
+}
+
+
+.hero {
+  --clr-accent: #faa700;
+}
+
+.eddie {
+  --clr-inner: #faa700;
+  --clr-outer: #e48d00;
+  --clr-accent: #a1173c;
+}
+.jessica {
+  --clr-inner: #fce4b3;
+  --clr-outer: #eac886;
+  --clr-accent: #2f4858;
+}
+.louis {
+  --clr-inner: #6dd5ed;
+  --clr-outer: #2193b0;
+  --clr-accent: #008951;
+}
+
+.emery {
+  --clr-inner: #BFE7B2;
+  --clr-outer: #2AB200;
+  --clr-accent: #d1273c;
+}
+.evan {
+  --clr-inner: #A58FB1;
+  --clr-outer: #4B2064;
+  --clr-accent: #2f4858;
+}
+.grandma {
+  --clr-inner: #FFB3BA;
+  --clr-outer: #4C3537;
+  --clr-accent: #008951;
+}
