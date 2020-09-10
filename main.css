@@ -165,7 +165,7 @@ p {
 .footer {
   left: 0;
   bottom: 0;
-  background-color: black;
+  background-color: radial-gradient(#505, #111);
   color: white;
   text-align: right;
 }
